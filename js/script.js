@@ -1,5 +1,5 @@
 function calculadoraPrecio() {
-    //DATOS
+    
     let precios = {
         h50: 120000,
         hh: 240000,
@@ -13,27 +13,29 @@ function calculadoraPrecio() {
         cuotas3: 0.3,
         cuotas6: 0.6       
     };
-    // SELECCION DE DATO
+
     let opcionMesa = document.getElementById("opcionMesa").value;
     let opcionBlend = document.getElementById("opcionBlend").value;
     let cuotas = document.getElementById("cuotas").value;
-    //CALCULO
+    console.log(opcionMesa);
+    console.log(opcionBlend);
+    console.log(cuotas);
 
-    let precioTotal = precios[opcionMesa] + precios[opcionBlend];
-    let precioFinal= precioTotal + (precioTotal* precios[cuotas])
-    let entradasorteo = (prompt("Ingresa nro del 1 al 10 y participara por sorteo de 50% de descuento:"));
-    if (entradasorteo == "5") {
-        precioFinalFinal = precioFinal - (precioFinal*(0.5));
-        alert ("Ganaste 50% de descuento!")
-    } else {
-        alert ("Segui participando con tu proxima compra.")
-    } 
-    //RESULTADO
-    console.log("Precio Total es: " + precioTotal);
+
+    let precioTotal = precios[opcionMesa] + precios [opcionBlend];
+
+    precioTotal = precioTotal * (1 + precios[cuotas]);
+
+    let sorteo = prompt ("INGRESA NRO DE DEL 1 AL 10 Y PARTICIPA POR 50% DESCUENTO")
+    if (sorteo == "5"){
+        precioTotal = precioTotal = precioTotal - (precioTotal*0.5) + "  (50% descuento incluido.)";
+        alert ("GANASTE UN 50% DE DESCUENTO EN TU COMPRA!!!")
+    } else if (sorteo != "5")
+    alert ("Mejor suerte la proxima compra!!");
+    console.log(sorteo);
+
+    console.log("Precio Total es: $" + precioTotal);
     document.getElementById("resultado").innerText = "Precio total: $" + precioTotal;
-    document.getElementById("enCuotas").innerText = "Precio total en cuotas: $" + precioFinal;
-    document.getElementById("ganadorSorteo").innerText = "GANASTE 50 % DE DESCUENTO: $" + precioFinalFinal;
-    
 }
 
 
