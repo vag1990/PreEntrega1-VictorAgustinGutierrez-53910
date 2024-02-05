@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>53910 - 1ER PREENTREGA - VICTOR AGUSTIN GUTIERREZ</h1>
+    </header>
+
+    <div class="calculadora">
+        <h2>Calcula el precio de tu mesa ahora!!</h2>
+        <label for="opcionMesa">Selecciona un tipo de mesa:</label>
+        <select name="opcionMesa" id="opcionMesa">
+            <option value="h50">H50</option>
+            <option value="hh">HH OVAL</option>
+            <option value="ft">FT LATERAL</option>
+            <option value="dual">DUALBOX</option>
+        </select>
+        <label for="opcionBlend">Selecciona un tipo de blend:</label>
+        <select name="opcionBlend" id="opcionBlend">
+            <option value="a1">A1</option>
+            <option value="a2">A2</option>
+            <option value="a3">A3</option>
+            <option value="a4">A4</option>
+        </select>
+        <label for="cuotas">Selecciona cant. cuotas:</label>
+        <select name="cuotas" id="cuotas">
+            <option value="cuota0"></option>
+            <option value="cuotas3">3cuotas(30% de interes)</option>
+            <option value="cuotas6">6cuotas(60% de interes)</option>
+        </select>
+
+        <input class="botonCalcular" type="button" value="Calcular" onclick="calculadoraPrecio()">
+        
+       
+
+        <div id="resultado"></div>
+        
+        <div id="enCuotas"></div>
+
+        <div id="ganadorSorteo"></div>
+        
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
