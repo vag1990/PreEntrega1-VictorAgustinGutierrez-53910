@@ -14,27 +14,30 @@
         <h1>53910 - 1ER PREENTREGA - VICTOR AGUSTIN GUTIERREZ</h1>
     </header>
 
+    <div id="datosMesa"></div>
+
     <div class="calculadora">
-        <h2>Calcula el precio de tu mesa ahora!!</h2>
+        <h2>Calcula el precio de tu mesa ahora!! ModoEditor</h2>
         <label for="opcionMesa">Selecciona un tipo de mesa:</label>
         <select name="opcionMesa" id="opcionMesa">
-            <option value="h50">H50</option>
-            <option value="hh">HH OVAL</option>
-            <option value="ft">FT LATERAL</option>
-            <option value="dual">DUALBOX</option>
+            <option value="Mesa H50">Mesa H50</option>
+            <option value="Mesa HH">Mesa HH</option>
+            <option value="Mesa Ft">Mesa Ft</option>
+            <option value="Mesa DualBox">Mesa DualBox</option>
         </select>
         <label for="opcionBlend">Selecciona un tipo de blend:</label>
         <select name="opcionBlend" id="opcionBlend">
-            <option value="a1">A1</option>
-            <option value="a2">A2</option>
-            <option value="a3">A3</option>
-            <option value="a4">A4</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+            <option value="A4">A4</option>
         </select>
+        <div id="blendElegida"></div>
         <label for="cuotas">Selecciona cant. cuotas:</label>
         <select name="cuotas" id="cuotas">
-            <option value="cuota0"></option>
-            <option value="cuotas3">3cuotas(30% de interes)</option>
-            <option value="cuotas6">6cuotas(60% de interes)</option>
+            <option value="1">1cuota(0% de interes)</option>
+            <option value="3">3cuotas(30% de interes)</option>
+            <option value="6">6cuotas(60% de interes)</option>
         </select>
 
         <input class="botonCalcular" type="button" value="Calcular" onclick="calculadoraPrecio()">
